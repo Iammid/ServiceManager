@@ -62,10 +62,6 @@ using DIAttributes;
 public class ValidationService : IValidationService
 {
     private readonly INotificationFacade _dialogFacade;
-    private readonly IConfigurationService _configurationService;
-    private readonly IGroupModelProvider _groupModelProvider;
-    private readonly CheckboxStateService _checkboxStateService;
-
     // ...
 }
 ```
