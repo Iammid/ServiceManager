@@ -1,15 +1,3 @@
-Absolutely — I’ll write you a clean, professional-looking `README.md` you can drop directly into your GitHub repo. It will:
-
-- Explain what your tool does
-- Show how to install it
-- Explain the `<ProjectReference>` magic
-- Show how to use it with `[Scoped]`, etc.
-- Include a working code sample
-
----
-
-Here you go:
-
 ```md
 # 🔧 DIAttributes + ServiceManager (Roslyn Source Generator)
 
