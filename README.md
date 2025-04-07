@@ -1,4 +1,4 @@
-```md
+
 # 🔧 DIAttributes + ServiceManager (Roslyn Source Generator)
 
 **Automatically generate dependency injection registrations** using simple attributes like `[Scoped]`, `[Singleton]`, and `[Transient]`.
