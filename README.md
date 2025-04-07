@@ -22,6 +22,24 @@ A small class library that defines these attributes:
 
 Use them to annotate your services in your application.
 
+
+---
+
+## 💡 Why Use This?
+
+- 🔥 Stop maintaining giant lists of `AddScoped<...>()`
+- ✅ Keep registration close to implementation
+- ⚡ Works at **compile-time** (no reflection!)
+
+---
+
+## 🧪 Requirements
+
+- .NET 8+ for your app
+- The generator project (`ServiceManager`) must target `netstandard2.0`
+- Add `builder.Services.AddAutoServices();` in your app manually (required)
+- Have both the (`ServiceManager`) and (`DIAttributes`) installed and in the referenced folders
+
 ---
 
 ### `ServiceManager`
@@ -117,42 +135,4 @@ public static class ServiceRegistration
 }
 ```
 
----
 
-## 💡 Why Use This?
-
-- 🔥 Stop maintaining giant lists of `AddScoped<...>()`
-- ✅ Keep registration close to implementation
-- ⚡ Works at **compile-time** (no reflection!)
-- 👌 Fully static, safe, and native
-
----
-
-## 🧪 Requirements
-
-- .NET 8+ for your app
-- The generator project (`ServiceManager`) must target `netstandard2.0`
-- Add `builder.Services.AddAutoServices();` in your app manually (required)
-
----
-
-## 🚫 Limitations
-
-- Source generators **cannot inject code into your existing methods**
-- You must manually call `AddAutoServices()`
-- Interfaces must be public for detection to work
-
----
-
-## 💬 Questions? Ideas?
-
-Feel free to open issues or suggest improvements!
-
----
-
-MIT License • Use freely and contribute back if you like it 🚀
-```
-
----
-
-Let me know if you want this split across both projects, or want a version of this that’s **README + usage examples + project structure docs** in one. Happy to tweak it.
