@@ -42,11 +42,6 @@ Use them to annotate your services in your application.
 
 ---
 
-### `ServiceManager`
-A **Roslyn Source Generator** that scans for those attributes and automatically generates the appropriate DI registration code at compile time.
-
----
-
 ## 🧰 Setup (Installation)
 
 ### 1. Reference Both Projects
