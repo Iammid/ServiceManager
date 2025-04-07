@@ -10,8 +10,11 @@ No more writing `builder.Services.AddScoped<...>()` by hand — let the compiler
 ## 💡 Why Use This?
 
 - 🔥 Stop maintaining giant lists of `AddScoped<...>()`
-- ✅ Keep registration close to implementation
-- ⚡ Works at **compile-time** (no reflection!)
+- ⛓️ Attribute-based service registration (`[Scoped]`, `[Singleton]`, `[Transient]`)
+- 🧠 Automatically detects interfaces and registers like `services.AddScoped<IMyService, MyService>()`
+- ⚡ Powered by Roslyn source generators — compile-time, zero reflection
+- 📦 No runtime cost or startup scanning
+- ✅ Works with any .NET 8.0+ app
 
 ---
 
