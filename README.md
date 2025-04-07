@@ -7,6 +7,23 @@ No more writing `builder.Services.AddScoped<...>()` by hand — let the compiler
 
 ---
 
+## 💡 Why Use This?
+
+- 🔥 Stop maintaining giant lists of `AddScoped<...>()`
+- ✅ Keep registration close to implementation
+- ⚡ Works at **compile-time** (no reflection!)
+
+---
+
+## 🧪 Requirements
+
+- .NET 8+ for your app
+- The generator project (`ServiceManager`) must target `netstandard2.0`
+- Add `builder.Services.AddAutoServices();` in your app manually (required)
+- Have both the (`ServiceManager`) and (`DIAttributes`) installed and in the referenced folders
+
+---
+
 ## 📦 What Is This?
 
 This solution includes two projects:
@@ -22,23 +39,10 @@ A small class library that defines these attributes:
 
 Use them to annotate your services in your application.
 
-
 ---
 
-## 💡 Why Use This?
-
-- 🔥 Stop maintaining giant lists of `AddScoped<...>()`
-- ✅ Keep registration close to implementation
-- ⚡ Works at **compile-time** (no reflection!)
-
----
-
-## 🧪 Requirements
-
-- .NET 8+ for your app
-- The generator project (`ServiceManager`) must target `netstandard2.0`
-- Add `builder.Services.AddAutoServices();` in your app manually (required)
-- Have both the (`ServiceManager`) and (`DIAttributes`) installed and in the referenced folders
+### `ServiceManager`
+A **Roslyn Source Generator** that scans for those attributes and automatically generates the appropriate DI registration code at compile time.
 
 ---
 
