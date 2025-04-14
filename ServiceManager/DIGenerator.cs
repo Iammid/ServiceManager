@@ -36,13 +36,19 @@ namespace ServiceManager
 
                     if (lifetime is "Scoped" or "Singleton" or "Transient")
                     {
-                        var service = symbol.Interfaces.FirstOrDefault()?.ToDisplayString();
+                        var service = symbol.Interfaces.Where(i => i.ToDisplayString() != "System.IDisposable")
+                            .FirstOrDefault()?.ToDisplayString();
+
                         var impl = symbol.ToDisplayString();
 
                         if (service != null)
+                        {
                             registrations.Add($"services.Add{lifetime}<{service}, {impl}>();");
+                        }
                         else
+                        {
                             registrations.Add($"services.Add{lifetime}<{impl}>();");
+                        }
                     }
                 }
             }
